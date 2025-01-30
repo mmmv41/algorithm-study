@@ -5,9 +5,7 @@ class Solution {
         int cnt = 0;
         Arrays.sort(array);
         for (int n : array){
-            if (n > height){
-                cnt++;
-            }
+            if (n > height) cnt++;
         }
         return cnt;
     }
