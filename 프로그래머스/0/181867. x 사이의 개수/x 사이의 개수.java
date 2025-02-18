@@ -1,25 +1,13 @@
+import java.util.*;
+
 class Solution {
     public int[] solution(String myString) {
-        int length = myString.length();
-
-        int cnt = 0;
-        for (int i = 0; i < myString.length(); i++) {
-            if (myString.charAt(i) == 'x') {
-                cnt++;
-            }
-        }
+        String[] arr = myString.split("x", -1); // 연속된 'x'와 마지막 'x'도 포함
+        int[] answer = new int[arr.length]; // 크기를 arr.length로 설정
         
-        int[] result = new int[cnt + 1];
-        
-        String[] splitArray = myString.split("x");
-
-        for (int i = 0; i < splitArray.length; i++) {
-            result[i] = splitArray[i].length();
-        }
-        
-        if (myString.charAt(length - 1) == 'x') {
-            result[cnt] = 0;
-        }
-        return result;
+        for (int i = 0; i < arr.length; i++) {
+            answer[i] = arr[i].length(); // 문자열의 길이를 저장
+        } 
+        return answer;
     }
 }
