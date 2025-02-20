@@ -16,7 +16,6 @@ public class Solution {
                 stk.pop();
             }
         }
-
         // Stack을 배열로 변환
         int[] result = new int[stk.size()];
         for (int j = result.length - 1; j >= 0; j--) {
