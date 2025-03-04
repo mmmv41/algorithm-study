@@ -3,7 +3,6 @@ class Solution {
         if (my_string.length() < is_prefix.length()){
             return 0;
         }
-        
         int length = is_prefix.length();
         
         if (my_string.substring(0,length).equals(is_prefix)){
