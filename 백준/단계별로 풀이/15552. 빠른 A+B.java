@@ -9,17 +9,14 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         int T = Integer.parseInt(br.readLine());
-        for (int i = 0; i < T; i++) {
+        for (int i = 1; i <= T; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            sb.append(a + b).append('\n');
+            sb.append("Case #" + i + ": ").append(a + b).append('\n');
         }
         br.close();
         System.out.println(sb);
     }
 }
 
- {
-    
-}
