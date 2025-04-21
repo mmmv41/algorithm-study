@@ -1,4 +1,4 @@
-// charAt() 이용한 코드 (120ms)
+// indexOf() 이용한 코드 (120ms)
 
 import java.io.BufferedReader;
 import java.io.IOException;
