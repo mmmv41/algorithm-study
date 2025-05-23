@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c82e2617-638d-4e6b-99f4-23b128be4ebd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/프로그래머스/입문/캐릭터의 좌표.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/프로그래머스/입문/옷가게 할인 받기.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2zrH0MkXRrWyAVTho3SESdrzJjk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -71,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736995487320</updated>
-      <workItem from="1752482050656" duration="19958000" />
+      <workItem from="1752482050656" duration="20063000" />
     </task>
     <servers />
   </component>
