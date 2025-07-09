@@ -30,4 +30,3 @@ public class Main {
         System.out.print(min + " " + max);
     }
 }
-
