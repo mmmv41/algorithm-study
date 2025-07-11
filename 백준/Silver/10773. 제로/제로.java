@@ -23,8 +23,8 @@ public class Main {
         }
         int sum = 0;
 
-        for (int num : list) {
-            sum += num;
+        for (int n : list) {
+            sum += n;
         }
 
         System.out.print(sum);
