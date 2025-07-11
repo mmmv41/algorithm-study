@@ -7,11 +7,10 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+
+        ArrayList<Integer> list = new ArrayList<>();
 
         int K = Integer.parseInt(br.readLine());
-        int sum = 0;
-        ArrayList<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < K; i++) {
             int num = Integer.parseInt(br.readLine());
@@ -22,9 +21,12 @@ public class Main {
                 list.add(num);
             }
         }
+        int sum = 0;
+
         for (int num : list) {
             sum += num;
         }
+
         System.out.print(sum);
     }
 }
