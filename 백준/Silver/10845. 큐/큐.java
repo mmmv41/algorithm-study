@@ -9,17 +9,17 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-
         int n = Integer.parseInt(br.readLine());
 
         Queue<Integer> que = new LinkedList<>();
-
+        int last = 0;
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             switch (st.nextToken()) {
                 case "push":
-                    que.add(Integer.parseInt(st.nextToken()));
+                    last = Integer.parseInt(st.nextToken());
+                    que.add(last);
                     break;
 
                 case "pop":
@@ -39,11 +39,7 @@ public class Main {
                     break;
 
                 case "back":
-                    int last = -1;
-                    for (int num : que) {
-                        last = num;
-                    }
-                    sb.append(last).append("\n");
+                    sb.append(que.isEmpty() ? -1 : last).append("\n");
                     break;
             }
         }
