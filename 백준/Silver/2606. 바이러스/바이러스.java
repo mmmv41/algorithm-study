@@ -1,42 +1,48 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 
 public class Main {
-	static boolean[] check;
-	static int[][] arr;
-	static int count = 0;
-	
-	static int node, line;
-	static Queue<Integer> q = new LinkedList<>();
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		node = Integer.parseInt(br.readLine());
-		line = Integer.parseInt(br.readLine());
-	
-		arr = new int[node+1][node+1];
-		check = new boolean[node+1];
-		
-		for(int i = 0 ; i < line ; i ++) {
-			StringTokenizer str = new StringTokenizer(br.readLine());
-			
-			int a = Integer.parseInt(str.nextToken());
-			int b = Integer.parseInt(str.nextToken());
-			
-			arr[a][b] = arr[b][a] =  1;	
-		}
-			dfs(1);
-			System.out.println(count-1);
-		}
-	public static void dfs(int start) {
-		
-		check[start] = true;
-		count++;
-		
-		for(int i = 0 ; i <= node ; i++) {
-			if(arr[start][i] == 1 && !check[i])
-				dfs(i);
-		}
-	}
+    static int cnt = 0;
+    static boolean[] visited;
+    static List<Integer>[] graph;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(br.readLine());    // 정점의 개수
+        int m = Integer.parseInt(br.readLine());    // 간선의 개수
+
+        graph = new ArrayList[n + 1];
+        for (int i = 1; i <= n; i++) {
+            graph[i] = new ArrayList<>();
+        }
+
+        for (int i = 1; i <= m; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            graph[a].add(b);
+            graph[b].add(a);
+        }
+        visited = new boolean[n + 1];
+
+        dfs(1);
+        System.out.print(cnt);
+    }
+
+    static void dfs(int num) {
+        visited[num] = true;
+        for (int i : graph[num]) {
+            if (!visited[i]) {
+                cnt++;
+                dfs(i);
+            }
+        }
+    }
 }
