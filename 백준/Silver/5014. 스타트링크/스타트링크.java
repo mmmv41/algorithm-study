@@ -16,6 +16,11 @@ public class Main {
         int U = Integer.parseInt(st.nextToken());       // 위로 U층
         int D = Integer.parseInt(st.nextToken());       // 아래로 D층
 
+        if (S == G) {
+            System.out.println(0);
+            return;
+        }
+
         int answer = bfs(F, S, G, U, D);
         System.out.print(answer >= 0 ? answer : "use the stairs");
     }
